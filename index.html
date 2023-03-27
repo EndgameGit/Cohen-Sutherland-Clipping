@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h2>Clipping mit Cohen-Sutherland</h2>
+        <table>
+            <tr>
+                <td><canvas id="myCanvas" width="500" height="500"></canvas></td>
+                <td>
+                    <table>
+                        <tr><td>
+                            <div class="card">
+                                Erstellen Sie eine Linie, indem Sie die linke <br>
+                                Maustaste ausgehend von einer Startposition <br>
+                                gedrückt halten, bis zum Erreichen der Endposition.
+                                <br><br>Die Linienfarbe und -breite können Sie über <br>
+                                das Steuerungspanel der Applikation festlegen:
+                            </div>
+                            
+                        </td></tr>
+                        <tr><td>
+                            <fieldset>
+                                <legend>Linienfarbe und Linienbreite</legend>
+                                <table><tr>
+                                    <td>
+                                        <label>Linienfarbe: </label>
+                                        <input type="color" oninput="changeColor(this.value)">
+                                    </td>
+                                    <td>
+                                        <label>Linienbreite: </label>
+                                        <input type="range" oninput="changeWidth(this.value)">
+                                    </td>
+                                </tr></table>
+                            </fieldset>
+                        </td></tr>
+                        <tr><td>
+                            <button onclick="clip()">Clip Line</button>
+                        </td></tr>
+                    </table>
+                </td>
+            </tr>
+            
+            
+        </table>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
